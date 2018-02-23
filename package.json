@@ -1,0 +1,27 @@
+{
+  "main": "dist/bundle.js",
+  "scripts": {
+    "clean": "rm -rf ./dist ./public ./src",
+    "rollup": "rollup -c",
+    "build": "make build; npm run-script rollup",
+    "rebuild": "make rebuild; npm run-script rollup",
+    "dev": "npm run-script build; micro-dev",
+    "start": "npm run-script rebuild; micro"
+  },
+  "dependencies": {
+    "cfx.rollup-plugin-coffee2": "^0.1.4",
+    "cfx.service": "^0.0.13",
+    "micro": "^9.1.0",
+    "microrouter": "^3.0.0",
+    "rollup": "^0.56.2",
+    "rollup-plugin-async": "^1.2.0",
+    "rollup-plugin-cleanup": "^2.0.0"
+  },
+  "devDependencies": {
+    "cfx.simple-build-tool": "^0.0.6",
+    "coffee-require": "^0.0.4",
+    "ddeyes": "^0.0.6",
+    "micro-dev": "^2.2.0",
+    "shelljs": "^0.8.1"
+  }
+}
